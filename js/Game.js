@@ -62,6 +62,7 @@ class Game {
 
       // add chosen class
       button.classList.add("chosen");
+      button.classList.add("animated", "zoomIn")
 
       // call check for win
       this.checkForWin();
@@ -76,6 +77,8 @@ class Game {
       button.classList.add("wrong");
       //disable the selected button
       button.setAttribute("disabled", true);
+      // add class wobble
+      button.classList.add("animated", "wobble");
       //remove a life
       this.removeLife();
     }
