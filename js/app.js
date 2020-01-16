@@ -22,11 +22,20 @@ buttons.forEach(button => {
   button.addEventListener('click', (event) => {
     game.handleInteraction(event)
   })
+});
 
-  button.addEventListener('keydown', (event) => {
-    game.handleInteraction(event)
+/**
+ * if key is pressed from the keyboard
+ */
+
+ buttons.forEach( btn => {
+  btn.addEventListener('keydown', (event) => {
+    // game.handleInteraction(event)
+    console.log(event)
   })
 });
+
+
 
 // click, addEventListener('click', (event) => {
 //   game.handleInteration(event)

@@ -9,7 +9,7 @@ class Game {
       new Phrase("I am on a seafood diet I see food and I eat it"),
       new Phrase("A balanced diet means a cupcake in each hand"),
       new Phrase("I love you"),
-      new Phrase("Fish and visitors stink after three days"),
+      new Phrase("PHRASE HUNTER"),
       new Phrase("Humpty Dumpty was pushed")
     ];
 
@@ -40,6 +40,10 @@ class Game {
     this.activePhrase = select;
     select.addPhraseToDisplay();
 
+    // this.getRandomPhrase();
+    // this.activePhrase = this.getRandomPhrase().addPhraseToDisplay();
+
+
     //selected phrase
     console.log(this.activePhrase);
   }
@@ -51,6 +55,7 @@ class Game {
   handleInteraction(event) {
     let button = event.target;
     let letter = event.target.innerText;
+    // console.log(event)
     const gameStatus = document.getElementById("game-over-message");
 
     //check clicked letter
@@ -62,14 +67,17 @@ class Game {
 
       // add chosen class
       button.classList.add("chosen");
-      button.classList.add("animated", "zoomIn")
+      // button.classList.add("animated", "zoomIn")
+      this.animateCSS(button, "zoomIn")
+      
 
       // call check for win
       this.checkForWin();
       console.log(this.checkForWin());
       // if check for win return true
       if (this.checkForWin()) {
-        this.gameOver(this.checkForWin())
+        setTimeout(() => { this.gameOver(this.checkForWin()); }, 700);
+        
       }
     } else {
       console.log(button);
@@ -78,7 +86,8 @@ class Game {
       //disable the selected button
       button.setAttribute("disabled", true);
       // add class wobble
-      button.classList.add("animated", "wobble");
+      // button.classList.add("animated", "wobble");
+      this.animateCSS(button, "wobble")
       //remove a life
       this.removeLife();
     }
@@ -111,7 +120,7 @@ class Game {
       //counter to determine which life to remove in the lifes array
       let totalLives = lifes.length - this.missed - 1;
       //change the source attribute of the life that needs to be removed
-      lifes[totalLives].setAttribute("src", "../images/lostHeart.png");
+      lifes[totalLives].setAttribute("src", "images/lostHeart.png");
     }
     //Increases the value of the missed property
     this.missed += 1;
@@ -164,8 +173,23 @@ class Game {
     const hearts = document.querySelectorAll('#scoreboard img');
 
     hearts.forEach(heart => {
-      heart.setAttribute('src', '../images/liveHeart.png')
+      heart.setAttribute('src', 'images/liveHeart.png')
     })
 
+  }
+
+  /**
+   * 
+   */
+  
+  animateCSS(element, animationName) {
+    // const node = document.querySelector(element)
+    element.classList.add('animated', animationName)
+    
+    function handleAnimationEnd() {
+      element.classList.remove('animated', animationName)
+      element.removeEventListener('animationend', handleAnimationEnd)
+    }
+    element.addEventListener('animationend', handleAnimationEnd)
   }
 }
