@@ -36,9 +36,9 @@ class Game {
     overlay.style.visibility = "hidden";
 
     //call the the getRandomPhrase
-    let select = this.getRandomPhrase();
-    this.activePhrase = select;
-    select.addPhraseToDisplay();
+    this.activePhrase = this.getRandomPhrase();
+     
+    this.activePhrase.addPhraseToDisplay();
 
     // this.getRandomPhrase();
     // this.activePhrase = this.getRandomPhrase().addPhraseToDisplay();
