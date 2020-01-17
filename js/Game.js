@@ -142,8 +142,10 @@ class Game {
     //Check for win
     if (gameWon) {
       gameStatus.innerText = 'Woohoo, You Won!!!'
+      overlay.classList.add('win');
     } else {
-      gameStatus.innerText = 'Sorry, Wishing you better luck next time !!!'
+      gameStatus.innerText = 'Sorry, Wishing you better luck next time !!!';
+      overlay.classList.add('lose')
     }
 
   }
