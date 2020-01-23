@@ -12,15 +12,15 @@ class Game {
       new Phrase("PHRASE HUNTER"),
       new Phrase("Humpty Dumpty was pushed"),
       new Phrase('Eat your foot'),
-      new phrase('Save water drink beer'),
-      new phrase('Save a tree eat a beaver'),
-      new phrase('Get high climb a tree'),
-      new phrase('The banana has legs'),
-      new phrase('Banana suicide'),
-      new phrase('Even my issues have issues'),
-      new phrase('Bludhing Monkey'),
-      new phrase('My eyebrow died'),
-      new phrase('Tell the truth and run')      
+      new Phrase('Save water drink beer'),
+      new Phrase('Save a tree eat a beaver'),
+      new Phrase('Get high climb a tree'),
+      new Phrase('The banana has legs'),
+      new Phrase('Banana suicide'),
+      new Phrase('Even my issues have issues'),
+      new Phrase('Bludhing Monkey'),
+      new Phrase('My eyebrow died'),
+      new Phrase('Tell the truth and run')      
     ];
 
     //need to add 5 phrases inside this array
