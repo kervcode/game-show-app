@@ -14,7 +14,7 @@ class Game {
       new Phrase('Eat your foot'),
       new phrase('Save water drink beer'),
       new phrase('Save a tree eat a beaver'),
-      new phrase('Get high climb a tree),
+      new phrase('Get high climb a tree'),
       new phrase('The banana has legs'),
       new phrase('Banana suicide'),
       new phrase('Even my issues have issues'),
