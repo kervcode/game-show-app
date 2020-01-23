@@ -10,7 +10,17 @@ class Game {
       new Phrase("A balanced diet means a cupcake in each hand"),
       new Phrase("I love you"),
       new Phrase("PHRASE HUNTER"),
-      new Phrase("Humpty Dumpty was pushed")
+      new Phrase("Humpty Dumpty was pushed"),
+      new Phrase('Eat your foot'),
+      new phrase('Save water drink beer'),
+      new phrase('Save a tree eat a beaver'),
+      new phrase('Get high climb a tree),
+      new phrase('The banana has legs'),
+      new phrase('Banana suicide'),
+      new phrase('Even my issues have issues'),
+      new phrase('Bludhing Monkey'),
+      new phrase('My eyebrow died),
+      new phrase('Tell the truth and run')      
     ];
 
     //need to add 5 phrases inside this array
