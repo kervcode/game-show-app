@@ -19,7 +19,7 @@ class Game {
       new phrase('Banana suicide'),
       new phrase('Even my issues have issues'),
       new phrase('Bludhing Monkey'),
-      new phrase('My eyebrow died),
+      new phrase('My eyebrow died'),
       new phrase('Tell the truth and run')      
     ];
 
